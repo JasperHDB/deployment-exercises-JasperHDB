@@ -1,9 +1,12 @@
 ingress:
   enabled: true
-  annotations:
-    cert-manager.io/cluster-issuer: cluster-issuer
-  hosts: support.67.co.ucll.cloud
+  certManager: true
+  hostname: support.67.co.ucll.cloud
   tls: true
+  annotations:
+    kubernetes.io/ingress.class: nginx
+    cert-manager.io/cluster-issuer: cluster-issuer
+  
 
 redmineUsername: admin
 redminePassword: password
