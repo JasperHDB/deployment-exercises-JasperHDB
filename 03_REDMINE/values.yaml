@@ -1,0 +1,27 @@
+ingress:
+  enabled: true
+  annotations:
+    cert-manager.io/cluster-issuer: cluster-issuer
+  hostname:
+    - host: support.67.co.ucll.cloud
+      paths:
+        - path: /
+          pathType: Prefix
+  tls:
+    - secretName: redmine-tls
+      hosts:
+        - support.67.co.ucll.cloud
+
+redmineUsername: admin
+redminePassword: password
+
+databaseType: postgresql
+
+mariadb:
+  enabled: false
+
+postgresql:
+  enabled: true
+  postgresqlDatabase: redmine
+  postgresqlUsername: redmine
+  postgresqlPassword: password
