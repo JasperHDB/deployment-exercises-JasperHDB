@@ -3,7 +3,7 @@ ingress:
   annotations:
     cert-manager.io/cluster-issuer: cluster-issuer
   hosts: support.67.co.ucll.cloud
-  tls: redmine-tls
+  tls: true
 
 redmineUsername: admin
 redminePassword: password
